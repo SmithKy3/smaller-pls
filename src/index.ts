@@ -1,6 +1,6 @@
-import { downSample } from './downsamplers/MK1';
+import { downsample } from './downsamplers/AreaAverage';
 
-async function downscale(
+export async function downscale(
   original: HTMLImageElement,
   desiredWidth: number,
   desiredHeight: number
@@ -21,7 +21,7 @@ async function downscale(
   const loadingCanvas = new OffscreenCanvas(desiredWidth, desiredHeight);
   const loadingContext = loadingCanvas.getContext('2d');
 
-  downSample(original, desiredWidth, desiredHeight).then((data) =>
+  downsample(original, desiredWidth, desiredHeight).then((data) =>
     loadingContext!.putImageData(data, 0, 0)
   );
 
