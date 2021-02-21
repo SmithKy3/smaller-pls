@@ -1,10 +1,13 @@
+import * as Types from '../types';
+import * as helpers from '../helpers';
+
 // AreaAverage algorithm
-export async function downsample(
+export const areaAverage: Types.downsampleFn = async (
   img: HTMLImageElement,
   desiredWidth: number,
   desiredHeight: number
-): Promise<ImageData> {
-  const canvas = new OffscreenCanvas(img.width, img.height);
+) => {
+  const canvas = helpers.getSizedCanvas(img.width, img.height);
   const ctx = canvas.getContext('2d');
   ctx!.drawImage(img, 0, 0);
   const sourceData = ctx!.getImageData(0, 0, canvas.width, canvas.height);

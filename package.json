@@ -1,10 +1,12 @@
 {
   "name": "smaller-pls",
   "version": "1.0.0",
-  "description": "An image downscaler for the web, using the AreaAverage algorithm",
+  "description": "An image downscaler for the web",
   "main": "./dist/index.js",
+  "exports": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -16,7 +18,7 @@
     "downsample",
     "resize"
   ],
-  "author": "Kye LJ  Smith",
+  "author": "Kye LJ Smith",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/SmithKy3/smaller-pls/issues"
@@ -24,6 +26,6 @@
   "homepage": "https://github.com/SmithKy3/smaller-pls#readme",
   "devDependencies": {
     "@types/node": "^14.0.13",
-    "typescript": "^3.9.5"
+    "typescript": "^4.1.0"
   }
 }
