@@ -1,12 +1,13 @@
 {
   "name": "smaller-pls",
   "version": "1.0.0",
-  "description": "An image downscaler for the web",
-  "main": "./dist/index.js",
+  "description": "An image downscaler for HTML5 canvas",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "source": "src/index.ts",
   "exports": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "node bundle.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,7 @@
   },
   "homepage": "https://github.com/SmithKy3/smaller-pls#readme",
   "devDependencies": {
-    "@types/node": "^14.0.13",
-    "typescript": "^4.1.0"
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^4.2.2"
   }
 }
