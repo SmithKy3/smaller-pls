@@ -1,5 +1,5 @@
-import { areaAverage } from './AreaAverage';
-import { nearestNeighbor  } from './NearestNeighbour';
+import { areaAverage } from './areaAverage';
+import { nearestNeighbor  } from './nearestNeighbour';
 
 export default {
     areaAverage,
