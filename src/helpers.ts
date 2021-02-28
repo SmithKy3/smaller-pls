@@ -22,7 +22,7 @@ export async function getLoadedImage(src: string): Promise<HTMLImageElement> {
 }
 
 export function getSizedCanvas(w: number, h: number): HTMLCanvasElement {
-    const canvas = new HTMLCanvasElement();
+    const canvas = document.createElement('canvas');
     canvas.width = w;
     canvas.height = h;
     return canvas;
