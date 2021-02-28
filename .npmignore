@@ -1,6 +1,7 @@
-/.cache
-/dist
 /node_modules
-/demo
 /src
+.gitignore
+bundle.js
+LICENSE
+tsconfig.json
 /tsconfig.json
